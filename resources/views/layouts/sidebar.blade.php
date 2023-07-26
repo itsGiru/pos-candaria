@@ -105,12 +105,14 @@
   </a>
 </li>
 
+@if (Auth::user()->role == 1 )
 <li class="nav-item has-treeview">
   <a href="{{ route('settings.index') }}" class="nav-link {{ activeSegment('settings', 1) }}">
       <i class="nav-icon fas fa-cogs"></i>
       <p>Settings</p>
   </a>
 </li>
+@endif
 
 <li class="nav-item">
   <a href="#" class="nav-link" onclick="document.getElementById('logout-form').submit()">
