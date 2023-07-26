@@ -58,7 +58,11 @@
           </form>
         </div>
       </li>--}}
-
+      <li class="nav-item">
+        <strong>
+          <span id="date_time"></span>
+        </strong>
+      </li>
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <i class="fas fa-expand-arrows-alt"></i>
