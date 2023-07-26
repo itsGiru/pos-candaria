@@ -21,7 +21,7 @@
             </div>
         @endif
 
-       <b> {{ Auth::user()->name }} </b>  {{ __('You are logged in!') }}
+      {{ __('Kamu login sebagai') }} <b> {{ Auth::user()->name }} </b> <b> {{ Auth::user()->role === "1" ? '(Admin)' : '(Kasir)' }} </b>
     </div>
     <div class="row">
       <div class="col-lg-3 col-6">

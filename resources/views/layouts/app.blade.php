@@ -71,6 +71,27 @@
     </ul>
   </nav>
   <!-- /.navbar -->
+  <script>
+    function format_rupiah(angka, prefix) {
+        var number_string = angka.replace(/[^,\d]/g, '').toString(),
+            split = number_string.split(','),
+            sisa = split[0].length % 3,
+            rupiah = split[0].substr(0, sisa),
+            ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+        if (ribuan) {
+            separator = sisa ? '.' : '';
+            rupiah += separator + ribuan.join('.');
+        }
+
+        rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+        return prefix == undefined ? rupiah : rupiah ? prefix + rupiah : '';
+    }
+    window.APP = <?php echo json_encode([
+                        'currency_symbol' => config('settings.currency_symbol'),
+                        'warning_quantity' => config('settings.warning_quantity'),
+                    ]) ?>
+</script>
 
   <!-- Main Sidebar Container -->
   @include('layouts.sidebar')
@@ -187,7 +208,35 @@
 <script src="{{ asset('backend/js/sweetalert.min.js') }}"></script>
 
 <!-- End  Sweet Alert and Toaster notifications -->
+<!-- ./wrapper -->
+    <script src="{{ asset('backend/js/moment-locales.min.js') }}"></script>
+    <script src="{{ asset('backend/js/id.min.js') }}"></script>
+    <script>
+        var date_system_value = "{{ 
+            config('settings.date_system_value')
+         }}";
+        var date_system = {{ config('settings.date_system') }};
+        setInterval(function() {
+                if(date_system_value == 0){
+                    var date_time = moment().format('LLLL');
+                } else {
+                    const [hours, minutes] = date_system_value.split(':');
 
+                    const currentTime = new Date();
+                    currentTime.setHours(hours);
+                    currentTime.setMinutes(minutes);
+
+                    var date_time = moment(currentTime).format('LLLL');
+                }
+                document.getElementById('date_time').innerHTML = date_time;
+            }, 1000);
+
+            var url = window.location.pathname;
+            if (url != '/admin/cart' || url != '/admin/purchase'){
+                localStorage.removeItem('cart');
+                localStorage.removeItem('cart_purchase');
+            }
+    </script>
 
 </body>
 </html>

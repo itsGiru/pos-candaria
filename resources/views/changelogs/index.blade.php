@@ -27,6 +27,15 @@
 <div class="card">
     <div class="card-body">
         <ul class="logs">
+            <h2>v1.0.1</h2>
+            <li>
+                <p  class="paragraf">Penambahan Menu Setting</p>
+            </li>
+            <li>
+                <p  class="paragraf">penambahan Jam pada Navbar</p>
+            </li>
+        </ul>
+        <ul class="logs">
             <h2>v1.0.0</h2>
             <li>
                 <p  class="paragraf">Update PHP 8.1 dengan Laravel 10</p>

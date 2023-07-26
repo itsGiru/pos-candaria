@@ -1,9 +1,18 @@
-@extends('layouts.admin')
+@extends('layouts.app')
 
 @section('title', 'Update Settings')
 @section('content-header', 'Update Settings')
 
 @section('content')
+<div class="row">
+    <div class="col-md-12">
+    <div class="card card-primary">
+    <div class="card-header info">
+    <h3 class="card-title">Settings</h3>
+</div>
+</div>
+</div>
+</div>
 <div class="card">
     <div class="card-body">
         <form action="{{ route('settings.store') }}" method="post">
