@@ -32,9 +32,6 @@ class HomeController extends Controller
         $orders = Order::with(['items', 'payments'])->get();
         $customers_count = Customer::count();
 
-        // ambil data produk yang 10 ahri lagi akan expired 
-        $expired_product = \App\Models\Product::where('expired_date', '<=', date('Y-m-d', strtotime('+10 days')))->count();
-
         // ambil data order due date nya hari ini
         $currentDate = Carbon::now()->format('Y-m-d');
         $orders_due = Order::whereDate('due_day', $currentDate)->get();
@@ -55,13 +52,6 @@ class HomeController extends Controller
                 $amount = 0;
             }
         }
-
-        $expired_product_list = \App\Models\Product::where('expired_date', '<=', date('Y-m-d', strtotime('+1 days')))->get();
-
-        Session::put('expired_product', $expired_product);
-        Session::put('expired_product_list', $expired_product_list);
-        Session::put('expired_product_list_lenght', $expired_product_list->count());
-
         return view('home', [
             'orders_count' => $orders->count(),
             'income' => $orders->map(function($i) {

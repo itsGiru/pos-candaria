@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ChangelogsController;
 use App\Http\Controllers\backend\BookcategoryController;
 use App\Http\Controllers\UsermanagementController;
@@ -45,3 +46,8 @@ Route::get('changelogs', [App\Http\Controllers\ChangelogsController::class,'inde
 //Settings Routes
 Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
 Route::post('/settings', [SettingController::class, 'store'])->name('settings.store');
+
+//Products Routes
+Route::resource('products', ProductController::class);
+Route::post('/update-purchase-price', [ProductController::class, 'updatePurchasePrice'])->name('products.updatePurchasePrice');
+Route::get('/delete_products/{id}', [ProductController::class,'ProductsDelete']);
