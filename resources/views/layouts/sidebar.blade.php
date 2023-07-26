@@ -87,7 +87,7 @@
         
 @endif
 <li class="nav-item has-treeview">
-  <a href="{{ route('products.index') }}" class="nav-link {{ activeSegment('products') }}">
+  <a href="{{ route('products.index') }}" class="nav-link {{ activeSegment('products', 1) }}">
       <i class="nav-icon fas fa-th-large"></i>
       <p>Products</p>
   </a>
