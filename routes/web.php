@@ -2,12 +2,13 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\SettingController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\ChangelogsController;
-use App\Http\Controllers\backend\BookcategoryController;
 use App\Http\Controllers\UsermanagementController;
+use App\Http\Controllers\backend\BookcategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,3 +52,9 @@ Route::post('/settings', [SettingController::class, 'store'])->name('settings.st
 Route::resource('products', ProductController::class);
 Route::post('/update-purchase-price', [ProductController::class, 'updatePurchasePrice'])->name('products.updatePurchasePrice');
 Route::get('/delete_products/{id}', [ProductController::class,'ProductsDelete']);
+
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::post('/cart', [CartController::class, 'store'])->name('cart.store');
+Route::post('/cart/change-qty', [CartController::class, 'changeQty']);
+Route::delete('/cart/delete', [CartController::class, 'delete']);
+Route::delete('/cart/empty', [CartController::class, 'empty']);

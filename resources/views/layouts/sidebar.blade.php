@@ -87,6 +87,12 @@
         
 @endif
 <li class="nav-item has-treeview">
+  <a href="{{ route('cart.index') }}" class="nav-link {{ activeSegment('cart') }}">
+      <i class="nav-icon fas fa-barcode"></i>
+      <p>Open POS</p>
+  </a>
+</li>
+<li class="nav-item has-treeview">
   <a href="{{ route('products.index') }}" class="nav-link {{ activeSegment('products', 1) }}">
       <i class="nav-icon fas fa-th-large"></i>
       <p>Produk</p>

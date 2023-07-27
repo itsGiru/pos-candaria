@@ -100,7 +100,7 @@
             </div>
 
             <button class="btn btn-primary" type="submit">Update</button>
-            <a href="/admin/products" class="btn btn-danger">Cancel</a>
+            <a href="/products" class="btn btn-danger">Cancel</a>
         </form>
     </div>
 </div>

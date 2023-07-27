@@ -211,7 +211,7 @@
             }, 1000);
 
             var url = window.location.pathname;
-            if (url != '/admin/cart' || url != '/admin/purchase'){
+            if (url != '/cart' || url != '/purchase'){
                 localStorage.removeItem('cart');
                 localStorage.removeItem('cart_purchase');
             }

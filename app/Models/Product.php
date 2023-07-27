@@ -11,8 +11,6 @@ class Product extends Model
         'description',
         'barcode',
         'price',
-        'purchase_price',
-        'expired_date',
         'quantity',
         'status',
         'uom'
