@@ -1,11 +1,14 @@
 @extends('layouts.app')
+
+@section('content-header', 'List Akun')
+
 @section('content')
 
        <div class="row">
 <div class="col-md-12">
 <div class="card card-primary">
 <div class="card-header info">
-<h3 class="card-title">User List</h3>
+<h3 class="card-title">List Akun</h3>
 </div>
             <!-- /.card-header -->
  <div class="card-body">
@@ -13,10 +16,10 @@
 <thead>
 <tr>
 <th>ID</th>
-<th>Name</th>               
+<th>Nama</th>               
 <th>email</th>  
-<th>Permission</th> 
-<th>Action</th>                  
+<th>Izin</th> 
+<th>Aksi</th>                  
 </tr>
 </thead>
 <tbody>
@@ -41,25 +44,17 @@ if($row->role==2)
 @endphp 
 
 </td>
-<td>
-<a href="{{ URL::to('/edit_user/'.$row->id) }}" class="btn btn-sm btn-info">Edit</a>
-<a href="{{ URL::to('delete_user/'.$row->id) }}" class="btn btn-sm btn-danger" id="delete" class="middle-align">Delete</a>
-
+<td class="d-flex" style="gap: 5px">
+       <a href="{{ URL::to('/edit_user/'.$row->id) }}" class="btn btn-sm btn-primary"><i
+               class="fas fa-edit"></i></a>
+       <button class="btn btn-sm btn-danger btn-delete" href="{{ URL::to('delete_user/'.$row->id) }}" id="delete"><i
+               class="fas fa-trash"></i></button>
 </td>
 </tr>
 @endforeach
 
 </tbody>
-<tfoot>
-<tr>
-<th>ID</th>
-<th>Name</th>               
-<th>email</th>  
-<th>Permission</th> 
-<th>Action</th>
-</tr>
-</tfoot>
-        </table>
+       </table>
         </div>
         <!-- /.card-body -->
         </div>

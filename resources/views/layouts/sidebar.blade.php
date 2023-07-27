@@ -79,7 +79,7 @@
             <a href="{{URL::to('/user_list')}}" class="nav-link {{ activeSegment('user_list', 1) }}">
               <i class="nav-icon fas fa-user"></i>
               <p>
-                User List
+                List Akun
                 <!-- <span class="right badge badge-danger">New</span> -->
               </p>
             </a>
@@ -89,7 +89,7 @@
 <li class="nav-item has-treeview">
   <a href="{{ route('products.index') }}" class="nav-link {{ activeSegment('products', 1) }}">
       <i class="nav-icon fas fa-th-large"></i>
-      <p>Products</p>
+      <p>Produk</p>
   </a>
 </li>
 
@@ -101,23 +101,21 @@
 <li class="nav-item">
   <a href="{{URL::to('/changelogs')}}" class="nav-link {{ activeSegment('changelogs', 1) }}">
     <i class="nav-icon far fa-plus-square"></i>
-    <p>Changelogs</p>
+    <p>Perubahan</p>
   </a>
 </li>
 
-@if (Auth::user()->role == 1 )
 <li class="nav-item has-treeview">
   <a href="{{ route('settings.index') }}" class="nav-link {{ activeSegment('settings', 1) }}">
       <i class="nav-icon fas fa-cogs"></i>
-      <p>Settings</p>
+      <p>Pengaturan</p>
   </a>
 </li>
-@endif
 
 <li class="nav-item">
   <a href="#" class="nav-link" onclick="document.getElementById('logout-form').submit()">
     <i class="nav-icon fas fa-sign-out-alt"></i>
-    <p>Logout</p>
+    <p>Keluar</p>
     <form action="{{route('logout')}}" method="POST" id="logout-form">
         @csrf
     </form>
