@@ -248,11 +248,12 @@ class Cart extends Component {
             this.handleShow();
         } else if (this.state.sales_type == "retail") {
             Swal.fire({
-                title: "Received Amount",
+                title: "Jumlah Diterima",
                 input: "text",
                 inputValue: this.getTotal(this.state.cart),
                 showCancelButton: true,
-                confirmButtonText: "Send",
+                confirmButtonText: "Kirim",
+                cancelButtonText: "Batal",
                 showLoaderOnConfirm: true,
                 preConfirm: (amount) => {
                     return axios
@@ -355,8 +356,8 @@ class Cart extends Component {
                                     <table className="table table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Product Name</th>
-                                                <th>Quantity</th>
+                                                <th>Nama Produk</th>
+                                                <th>Jumlah</th>
                                                 <th>UoM</th>
                                                 <th className="text-right">Price</th>
                                                 <th></th>
@@ -440,7 +441,7 @@ class Cart extends Component {
                                         onClick={this.handleEmptyCart}
                                         disabled={!cart.length}
                                     >
-                                        Cancel
+                                        Batal
                                     </button>
                                 </div>
                                 <div className="col">

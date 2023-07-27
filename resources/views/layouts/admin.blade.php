@@ -91,9 +91,8 @@
         <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
-    <script src="
-    https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js
-    "></script>
+    <script src="{{ asset('backend/js/moment-locales.min.js') }}"></script>
+    <script src="{{ asset('backend/js/id.min.js') }}"></script>
     <script>
         var date_system_value = "{{ 
             config('settings.date_system_value')
@@ -101,7 +100,7 @@
         var date_system = {{ config('settings.date_system') }};
         setInterval(function() {
                 if(date_system_value == 0){
-                    var date_time = moment().format('dddd, D MMMM YYYY, h:mm:ss a');
+                    var date_time = moment().format('LLLL');
                 } else {
                     const [hours, minutes] = date_system_value.split(':');
 
@@ -109,13 +108,13 @@
                     currentTime.setHours(hours);
                     currentTime.setMinutes(minutes);
 
-                    var date_time = moment(currentTime).format('dddd, D MMMM YYYY, h:mm:ss a');
+                    var date_time = moment(currentTime).format('LLLL');
                 }
                 document.getElementById('date_time').innerHTML = date_time;
             }, 1000);
 
             var url = window.location.pathname;
-            if (url != '/admin/cart' || url != '/admin/purchase'){
+            if (url != '/cart' || url != '/purchase'){
                 localStorage.removeItem('cart');
                 localStorage.removeItem('cart_purchase');
             }
