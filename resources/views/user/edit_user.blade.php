@@ -11,7 +11,7 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Edit User  for   {{ $edit->name }}</h3>
+                <h3 class="card-title">Edit User  untuk   {{ $edit->name }}</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -24,22 +24,22 @@
 
 if($edit->role==1)
 {
-       echo 'Present Permission is : <b>Admin</b>';
+       echo 'Izin saat ini adalah : <b>Admin</b>';
 }
 if($edit->role==2)
 {
-       echo 'Present Permission is : <b>Kasir</b>';
+       echo 'Izin saat ini adalah : <b>Kasir</b>';
 }
 
 @endphp
 </div>
                 <div class="form-group">
-<label for="exampleInputEmail1">Change the Permission</label>
+<label for="exampleInputEmail1">Ubah Izin</label>
  
 
 
              <select class="form-control" id="exampleFormControlSelect1" name="role" required>
-             <option  required> Please Select </option>          
+             <option  required> Pilih </option>          
 <option value="1" >Admin </option>
 <option value="2" >Kasir </option>
 

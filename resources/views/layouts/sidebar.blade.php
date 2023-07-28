@@ -73,7 +73,7 @@
             </a>
           </li>
 
-          <li class="nav-header">Management</li>
+          <li class="nav-header">Manajemen</li>
 @if (Auth::user()->role == 1 )
           <li class="nav-item">
             <a href="{{URL::to('/user_list')}}" class="nav-link {{ activeSegment('user_list', 1) }}">
@@ -86,10 +86,11 @@
           </li>
         
 @endif
+<li class="nav-header">Transaksi</li>
 <li class="nav-item has-treeview">
   <a href="{{ route('cart.index') }}" class="nav-link {{ activeSegment('cart') }}">
       <i class="nav-icon fas fa-barcode"></i>
-      <p>Open POS</p>
+      <p>Transaksi Baru</p>
   </a>
 </li>
 <li class="nav-item has-treeview">

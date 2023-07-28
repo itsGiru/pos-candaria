@@ -39,7 +39,7 @@ class CartController extends Controller
         } else {
             if ($product->quantity < 1) {
                 return response([
-                    'message' => 'Product out of stock',
+                    'message' => 'Stok produk habis!',
                 ], 400);
             }
             $request->user()->cart()->attach($product->id, ['quantity' => 1]);

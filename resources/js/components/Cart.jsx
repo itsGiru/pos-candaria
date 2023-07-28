@@ -359,7 +359,7 @@ class Cart extends Component {
                                                 <th>Nama Produk</th>
                                                 <th>Jumlah</th>
                                                 <th>UoM</th>
-                                                <th className="text-right">Price</th>
+                                                <th className="text-right">Harga</th>
                                                 <th></th>
                                             </tr>
                                         </thead>
@@ -461,7 +461,7 @@ class Cart extends Component {
                                 <input
                                     type="text"
                                     className="form-control"
-                                    placeholder="Search Product"
+                                    placeholder="Cari Produk"
                                     onKeyDown={this.handleChangeSearch}
                                     onChange={this.handleChangeSearch}
                                 />
@@ -502,7 +502,7 @@ class Cart extends Component {
                                                         {p.name}
                                                     </strong>
                                                     <p className="text-muted mt-2">
-                                                        Stock : {p.quantity}
+                                                        Stok : {p.quantity}
                                                     </p>
                                                 </h5>
                                             </div>

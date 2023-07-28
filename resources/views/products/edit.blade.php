@@ -13,9 +13,9 @@
             @method('PUT')
 
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name">Nama</label>
                 <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="name"
-                    placeholder="Name" value="{{ old('name', $product->name) }}">
+                    placeholder="Nama Barang" value="{{ old('name', $product->name) }}">
                 @error('name')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -25,10 +25,10 @@
 
 
             <div class="form-group">
-                <label for="description">Description</label>
+                <label for="description">Deskripsi</label>
                 <textarea name="description" class="form-control @error('description') is-invalid @enderror"
                     id="description"
-                    placeholder="description">{{ old('description', $product->description) }}</textarea>
+                    placeholder="Deskripsi (opsional)">{{ old('description', $product->description) }}</textarea>
                 @error('description')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -48,9 +48,9 @@
             </div>
 
             <div class="form-group">
-                <label for="price">Sell Price</label>
+                <label for="price">Harga Jual</label>
                 <input type="text" name="price" class="form-control @error('price') is-invalid @enderror" id="price"
-                    placeholder="price" value="{{ old('price', $product->price) }}">
+                    placeholder="Harga" value="{{ old('price', $product->price) }}">
                 @error('price')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -59,9 +59,9 @@
             </div>
 
             <div class="form-group">
-                <label for="quantity">Quantity</label>
+                <label for="quantity">Jumlah Barang</label>
                 <input type="text" name="quantity" class="form-control @error('quantity') is-invalid @enderror"
-                    id="quantity" placeholder="Quantity" value="{{ old('quantity', $product->quantity) }}">
+                    id="quantity" placeholder="Jumlah" value="{{ old('quantity', $product->quantity) }}">
                 @error('quantity')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -89,8 +89,8 @@
             <div class="form-group">
                 <label for="status">Status</label>
                 <select name="status" class="form-control @error('status') is-invalid @enderror" id="status">
-                    <option value="1" {{ old('status', $product->status) === 1 ? 'selected' : ''}}>Active</option>
-                    <option value="0" {{ old('status', $product->status) === 0 ? 'selected' : ''}}>Inactive</option>
+                    <option value="1" {{ old('status', $product->status) === 1 ? 'selected' : ''}}>Aktif</option>
+                    <option value="0" {{ old('status', $product->status) === 0 ? 'selected' : ''}}>Tidak Aktif</option>
                 </select>
                 @error('status')
                 <span class="invalid-feedback" role="alert">
@@ -100,7 +100,7 @@
             </div>
 
             <button class="btn btn-primary" type="submit">Update</button>
-            <a href="/products" class="btn btn-danger">Cancel</a>
+            <a href="/products" class="btn btn-danger">Batal</a>
         </form>
     </div>
 </div>

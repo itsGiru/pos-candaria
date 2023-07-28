@@ -111,9 +111,9 @@ class ProductController extends Controller
         $product->status = $request->status;
 
         if (!$product->save()) {
-            return redirect()->back()->with('error', 'Sorry, there\'re a problem while updating product.');
+            return redirect()->back()->with('error', 'Maaf, ada kesalahan saat mengupdate produk.');
         }
-        return redirect()->route('products.index')->with('success', 'Success, your product have been updated.');
+        return redirect()->route('products.index')->with('success', 'Produk berhasil diupdate.');
     }
 
     /**
@@ -136,11 +136,11 @@ class ProductController extends Controller
         $delete = DB::table('products')->where('id', $id)->delete();
         if ($delete)
                             {
-                                return Redirect()->route('products.index')->with('success','Product Deleted successfully!');                  
+                                return Redirect()->route('products.index')->with('success','Produk berhasil dihapus!');                  
                             }
              else
                   {
-                    return Redirect()->route('products.index')->with('error','Somthing is Wrong!');  
+                    return Redirect()->route('products.index')->with('error','Ada sesuatu yang salah!');  
                   }
 
       }

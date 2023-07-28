@@ -72,12 +72,12 @@ return view('user.create_User',compact('all'));
         if ($update) 
     {
             
-            return Redirect()->route('user.index')->with('success','User Updated successfully!');                     
+            return Redirect()->route('user.index')->with('success','User Berhasil Diupdate!');                     
     }
         else
     {
         
-        return Redirect()->route('user.index')->with('error','Somthing is Wrong!');    
+        return Redirect()->route('user.index')->with('error','Oops, ada sesuatu yang Salah!');    
     }
      
     }
@@ -88,11 +88,11 @@ public function UserDelete ($id)
         $delete = DB::table('users')->where('id', $id)->delete();
         if ($delete)
                             {
-                                return Redirect()->route('user.index')->with('success','User Deleted successfully!');                  
+                                return Redirect()->route('user.index')->with('success','User Berhasil Dihapus!');                  
                             }
              else
                   {
-                    return Redirect()->route('user.index')->with('error','Somthing is Wrong!');  
+                    return Redirect()->route('user.index')->with('error','Oops, ada sesuatu yang Salah!');  
                   }
 
       }

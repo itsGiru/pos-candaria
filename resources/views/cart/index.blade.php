@@ -1,6 +1,6 @@
-@extends('layouts.admin')
+@extends('layouts.navbar')
 
-@section('title', 'Open POS')
+@section('title', 'Transaksi Baru')
 
 @section('content')
     <div id="cart"></div>

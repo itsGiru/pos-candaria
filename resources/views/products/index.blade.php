@@ -24,7 +24,7 @@
 @if (Auth::user()->role == 1 )
 <div class="card-header bg-white">
 		<div>
-		<a href="{{route('products.create')}}" class="btn text-white btn-primary">Tambah Product</a>
+		<a href="{{route('products.create')}}" class="btn text-white btn-primary">Tambah Produk</a>
 		</div>
 	</div>
 @endif
@@ -65,7 +65,7 @@
                     }}</td>
                     <td>
                         <span
-                            class="right badge badge-{{ $product->status ? 'success' : 'danger' }}">{{$product->status ? 'Active' : 'Inactive'}}</span>
+                            class="right badge badge-{{ $product->status ? 'success' : 'danger' }}">{{$product->status ? 'Aktif' : 'Tidak Aktif'}}</span>
                     </td>
                     <td class="d-flex" style="gap: 5px">
                         @if (Auth::user()->role == 1 )
