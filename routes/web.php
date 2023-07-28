@@ -29,13 +29,15 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('list_bookcategory', [App\Http\Controllers\backend\BookcategoryController::class,'BookCategoryList'])->name('bookcategory.index');
-Route::get('/add_bookcategory',[App\Http\Controllers\backend\BookcategoryController::class,'BookCategoryAdd'])->name('bookcategoryadd');
-Route::post('/insert_bookcategory', [App\Http\Controllers\backend\BookcategoryController::class,'BookCategoryInsert']);
-Route::get('/edit_bookcategory/{id}', [App\Http\Controllers\backend\BookcategoryController::class,'BookEditCategory']);
-Route::post('/update_bookcategory/{id}', [App\Http\Controllers\backend\BookcategoryController::class,'BookUpdateCategory']);
-Route::get('/delete_bookcategory/{id}', [App\Http\Controllers\backend\BookcategoryController::class,'BookDeleteCategory']);
 
+//Transactions Routes
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::post('/cart', [CartController::class, 'store'])->name('cart.store');
+Route::post('/cart/change-qty', [CartController::class, 'changeQty']);
+Route::delete('/cart/delete', [CartController::class, 'delete']);
+Route::delete('/cart/empty', [CartController::class, 'empty']);
+
+//User Account Routes
 Route::get('user_list', [App\Http\Controllers\UsermanagementController::class,'UserList'])->name('user.index');
 Route::get('/edit_user/{id}', [App\Http\Controllers\UsermanagementController::class,'UserEdit']);
 Route::post('/update_user/{id}', [App\Http\Controllers\UsermanagementController::class,'UserUpdate']);
@@ -52,9 +54,3 @@ Route::post('/settings', [SettingController::class, 'store'])->name('settings.st
 Route::resource('products', ProductController::class);
 Route::post('/update-purchase-price', [ProductController::class, 'updatePurchasePrice'])->name('products.updatePurchasePrice');
 Route::get('/delete_products/{id}', [ProductController::class,'ProductsDelete']);
-
-Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
-Route::post('/cart', [CartController::class, 'store'])->name('cart.store');
-Route::post('/cart/change-qty', [CartController::class, 'changeQty']);
-Route::delete('/cart/delete', [CartController::class, 'delete']);
-Route::delete('/cart/empty', [CartController::class, 'empty']);
