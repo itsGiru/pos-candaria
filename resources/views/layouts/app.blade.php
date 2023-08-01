@@ -170,14 +170,17 @@
                   title: "Hapus Data?",
                   text: "Data akan terhapus secara Permanen!",
                   icon: "warning",
-                  buttons: true,
+                  buttons: {
+                  cancel: "Batal",
+                  confirm: "Hapus",
+                  },
                   dangerMode: true,
                 })
                 .then((willDelete) => {
                   if (willDelete) {
                        window.location.href = link;
                   } else {
-                    swal("Dibatalkan!");
+                    swal("Dibatalkan!", "Data Anda tetap aman.");
                   }
                 });
             });

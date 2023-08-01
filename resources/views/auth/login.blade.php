@@ -15,20 +15,25 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{{('backend/dist/css/adminlte.min.css')}}">
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" background="img/bg.jpg" style="background-repeat: no-repeat; background-attachment: fixed; background-size: cover">
 <div class="login-box">
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="" class="h1"><b>Login </b></a>
+      <a href="" class="h1"><b>Masuk</b></a>
     </div>
     <div class="card-body">
-      <p class="login-box-msg">Sign in to start your session</p>
+      <center>
+        <span>
+          <img src="img/logo1.png" alt="smekda" width="128px">
+        </span>
+      </center>
+      <p class="login-box-msg">Masuk ke Aplikasi</p>
 
       <form method="POST" action="{{ route('login') }}">
                         @csrf
         <div class="input-group mb-3">
-        <input id="email" type="email" placeholder="Enter Your Email Address" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+        <input id="email" type="email" placeholder="Email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
 @error('email')
     <span class="invalid-feedback" role="alert">
@@ -60,37 +65,34 @@
             <div class="icheck-primary">
               <input type="checkbox" id="remember">
               <label for="remember">
-                Remember Me
+                Ingat Saya
               </label>
             </div>
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            <button type="submit" class="btn btn-primary btn-block">Masuk</button>
           </div>
           <!-- /.col -->
         </div>
       </form>
 
-      <!-- <div class="social-auth-links text-center mt-2 mb-3">
+      {{-- <div class="social-auth-links text-center mt-2 mb-3">
         <a href="#" class="btn btn-block btn-primary">
-          <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
+          <i class="fab fa-facebook mr-2"></i> Masuk Dengan Facebook
         </a>
-        <a href="#" class="btn btn-block btn-danger">
-          <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-        </a>
-      </div> -->
+      </div> --}}
       <!-- /.social-auth-links -->
 
-      <p class="mb-1">
+      {{-- <p class="mb-1">
 @if (Route::has('password.request'))
 <a class="btn btn-link" href="{{ route('password.request') }}">
-{{ __('Forgot Your Password?') }}
+{{ __('Lupa Password?') }}
 </a>
 @endif
-      </p>
+      </p> --}}
       <p class="mb-0">
-        <a href="{{route('register')}}" class="text-center">Register a new membership</a>
+        <a href="{{route('register')}}" class="text-center">Daftar akun baru</a>
       </p>
     </div>
     <!-- /.card-body -->
