@@ -59,14 +59,13 @@
         <!-- small box -->
         <div class="small-box bg-danger">
           <div class="inner">
-            <h4>{{$buys_count}}</h4>
-
-            <p>Buy Order Count</p>
+            <h4>{{$products_count}}</h4>
+            <p>Total Produk</p>
           </div>
           <div class="icon">
-            <i class="ion ion-pie-graph"></i>
+            <i class="ion ion-pricetags"></i>
           </div>
-          <a href="#" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+          <a href="/products" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <div class="col-lg-3 col-6">

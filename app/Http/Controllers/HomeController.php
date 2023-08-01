@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\Order;
 use App\Models\Payment;
+use App\Models\Product;
 use App\Models\Customer;
 use App\Models\OrderItem;
 use Illuminate\Support\Facades\Session;
@@ -29,6 +30,7 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
+        $products_count = Product::count();
         $orders = Order::with(['items', 'payments'])->get();
         $customers_count = Customer::count();
 
@@ -68,7 +70,8 @@ class HomeController extends Controller
             'buys_count' => $orders->filter(function($i) {
                 return $i->supplier_id;
             })->count(),
-            'customers_count' => $customers_count
+            'customers_count' => $customers_count,
+            'products_count' => $products_count,
         ]);
     }
 }
