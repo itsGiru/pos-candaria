@@ -25,7 +25,7 @@
     <div class="card-body">
       <center>
         <span>
-          <img src="img/logo1.png" alt="smekda" width="128px">
+          <img src="backend/img/logo1.png" alt="smekda" width="128px">
         </span>
       </center>
       <p class="login-box-msg">Masuk ke Aplikasi</p>
