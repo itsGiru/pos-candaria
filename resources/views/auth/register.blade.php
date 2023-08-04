@@ -16,7 +16,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{{('backend/dist/css/adminlte.min.css')}}">
 </head>
-<body class="hold-transition register-page" background="img/bg.jpg" style="background-repeat: no-repeat; background-attachment: fixed; background-size: cover">
+<body class="hold-transition register-page" background="backend/img/bg.jpg" style="background-repeat: no-repeat; background-attachment: fixed; background-size: cover">
 <div class="register-box">
   <div class="card card-outline card-primary">
     <div class="card-header text-center">

@@ -15,7 +15,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{{('backend/dist/css/adminlte.min.css')}}">
 </head>
-<body class="hold-transition login-page" background="img/bg.jpg" style="background-repeat: no-repeat; background-attachment: fixed; background-size: cover">
+<body class="hold-transition login-page" background="backend/img/bg.jpg" style="background-repeat: no-repeat; background-attachment: fixed; background-size: cover">
 <div class="login-box">
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
