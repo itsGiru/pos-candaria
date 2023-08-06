@@ -38,9 +38,9 @@
         <div class="container">
             <div id="notfound" class="text-center ">
                 <img src="https://preview.redd.it/ivheqzcmv0x71.png?width=960&crop=smart&auto=webp&s=9345a8859e9488bac1a464cb60a4c62f61b94960" alt="error" width="192px">
-                <h1 class="ireng">404 Not Found</h1>
+                <h1 class="ireng">404 | Not Found</h1>
                 <p class="ireng">Sorry but the page you are looking for does not exist.</p>
-                <a href="/">Back to homepage</a>
+                <a class="text-decoration-none" href="/"><b>Back to homepage</b></a>
             </div>
         </div>
     </div>
