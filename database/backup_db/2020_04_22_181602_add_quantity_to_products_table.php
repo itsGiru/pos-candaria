@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('orders', function (Blueprint $table) {
-            $table->datetime("due_day");
+        Schema::table('products', function (Blueprint $table) {
+            $table->integer('quantity')->after('price')->default('1');
         });
     }
 
@@ -25,8 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('orders', function (Blueprint $table) {
-            $table->dropColumn("due_day");
+        Schema::table('products', function (Blueprint $table) {
+            $table->dropColumn('quantity');
         });
     }
 };

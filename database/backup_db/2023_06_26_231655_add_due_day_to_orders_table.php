@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('orders', function (Blueprint $table) {
-            $table->datetime("due_day");
+            $table->datetime("due_day")->nullable()->after("supplier_id");
         });
     }
 
