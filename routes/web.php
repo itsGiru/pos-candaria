@@ -31,26 +31,27 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 //Transactions Routes
-Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
-Route::post('/cart', [CartController::class, 'store'])->name('cart.store');
-Route::post('/cart/change-qty', [CartController::class, 'changeQty']);
-Route::delete('/cart/delete', [CartController::class, 'delete']);
-Route::delete('/cart/empty', [CartController::class, 'empty']);
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index')->middleware('checkUserRole:1,2'); // Hanya mengizinkan akun dengan role "1" dan "2" untuk akses
+Route::post('/cart', [CartController::class, 'store'])->name('cart.store')->middleware('checkUserRole:1,2');
+Route::post('/cart/change-qty', [CartController::class, 'changeQty'])->middleware('checkUserRole:1,2');
+Route::delete('/cart/delete', [CartController::class, 'delete'])->middleware('checkUserRole:1,2');
+Route::delete('/cart/empty', [CartController::class, 'empty'])->middleware('checkUserRole:1,2');
 
 //User Account Routes
-Route::get('user_list', [App\Http\Controllers\UsermanagementController::class,'UserList'])->name('user.index');
-Route::get('/edit_user/{id}', [App\Http\Controllers\UsermanagementController::class,'UserEdit']);
-Route::post('/update_user/{id}', [App\Http\Controllers\UsermanagementController::class,'UserUpdate']);
-Route::get('/delete_user/{id}', [App\Http\Controllers\UsermanagementController::class,'UserDelete']);
+Route::post('/change_role/{id}', [App\Http\Controllers\UsermanagementController::class,'changeRole'])->name('user.changeRole')->middleware('checkUserRole:1');
+Route::get('user_list', [App\Http\Controllers\UsermanagementController::class,'UserList'])->name('user.index')->middleware('checkUserRole:1,2');
+Route::get('/edit_user/{id}', [App\Http\Controllers\UsermanagementController::class,'UserEdit'])->middleware('checkUserRole:1');
+Route::post('/update_user/{id}', [App\Http\Controllers\UsermanagementController::class,'UserUpdate'])->middleware('checkUserRole:1');
+Route::get('/delete_user/{id}', [App\Http\Controllers\UsermanagementController::class,'UserDelete'])->middleware('checkUserRole:1');
 
 //Changelogs Routes
-Route::get('changelogs', [App\Http\Controllers\ChangelogsController::class,'index'])->name('changelogs.index');
+Route::get('changelogs', [App\Http\Controllers\ChangelogsController::class,'index'])->name('changelogs.index')->middleware('checkUserRole:1,2');
 
 //Settings Routes
-Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
-Route::post('/settings', [SettingController::class, 'store'])->name('settings.store');
+Route::get('/settings', [SettingController::class, 'index'])->name('settings.index')->middleware('checkUserRole:1,2');
+Route::post('/settings', [SettingController::class, 'store'])->name('settings.store')->middleware('checkUserRole:1,2');
 
 //Products Routes
-Route::resource('products', ProductController::class);
-Route::post('/update-purchase-price', [ProductController::class, 'updatePurchasePrice'])->name('products.updatePurchasePrice');
-Route::get('/delete_products/{id}', [ProductController::class,'ProductsDelete']);
+Route::resource('products', ProductController::class)->middleware('checkUserRole:1,2');
+Route::post('/update-purchase-price', [ProductController::class, 'updatePurchasePrice'])->name('products.updatePurchasePrice')->middleware('checkUserRole:1');
+Route::get('/delete_products/{id}', [ProductController::class,'ProductsDelete'])->middleware('checkUserRole:1');

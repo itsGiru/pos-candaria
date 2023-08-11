@@ -40,6 +40,10 @@ if($row->role==2)
 {
        echo 'Kasir';
 }
+if($row->role==3)
+{
+       echo 'Pending';
+}
 
 @endphp 
 
@@ -49,6 +53,12 @@ if($row->role==2)
                class="fas fa-edit"></i></a>
        <button class="btn btn-sm btn-danger btn-delete" href="{{ URL::to('delete_user/'.$row->id) }}" id="delete"><i
                class="fas fa-trash"></i></button>
+               @if($row->role == 3)
+        <form action="{{ URL::to('/change_role/'.$row->id) }}" method="POST">
+            @csrf
+            <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-check"></i>&nbsp;Izinkan</button>
+        </form>
+    @endif
 </td>
 </tr>
 @endforeach

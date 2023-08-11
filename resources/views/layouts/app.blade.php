@@ -45,7 +45,16 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <li>
-        <b> {{ Auth::user()->name }} </b> <b> {{ Auth::user()->role === "1" ? '(Admin)' : '(Kasir)' }} </b>
+        <b> {{ Auth::user()->name }} </b> <b>
+      @if(Auth::user()->role === "1")
+          (Admin)
+      @elseif(Auth::user()->role === "2")
+          (Kasir)
+      @elseif(Auth::user()->role === "3")
+          (Pending)
+      @else
+          (Peran Tidak Dikenal)
+      @endif </b>
       </li>
     </ul>
   </nav>

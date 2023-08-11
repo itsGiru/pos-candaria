@@ -66,15 +66,14 @@
               </p>
             </a>
           </li>--}}
+@if (Auth::user()->role == 1 )
           <li class="nav-item">
             <a href="{{URL::to('/home')}}" class="nav-link {{ activeSegment('home', 1) }}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>Dashboard</p>
             </a>
           </li>
-
           <li class="nav-header">Manajemen</li>
-@if (Auth::user()->role == 1 )
           <li class="nav-item">
             <a href="{{URL::to('/user_list')}}" class="nav-link {{ activeSegment('user_list', 1) }}">
               <i class="nav-icon fas fa-user"></i>
@@ -84,8 +83,6 @@
               </p>
             </a>
           </li>
-        
-@endif
 <li class="nav-item">
   <a href="{{ route('products.index') }}" class="nav-link {{ activeSegment('products', 1) }}">
     <i class="nav-icon fas fa-th-large"></i>
@@ -102,12 +99,6 @@
       <p>Transaksi Baru</p>
   </a>
 </li>
-
-@if (Auth::user()->role == 2 )
-
-     
-        
-@endif
 <li class="nav-item">
   <a href="{{URL::to('/changelogs')}}" class="nav-link {{ activeSegment('changelogs', 1) }}">
     <i class="nav-icon far fa-plus-square"></i>
@@ -121,6 +112,46 @@
       <p>Pengaturan</p>
   </a>
 </li>
+@endif
+
+@if (Auth::user()->role == 2 )
+          <li class="nav-item">
+            <a href="{{URL::to('/home')}}" class="nav-link {{ activeSegment('home', 1) }}">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-header">Manajemen</li>
+<li class="nav-item">
+  <a href="{{ route('products.index') }}" class="nav-link {{ activeSegment('products', 1) }}">
+    <i class="nav-icon fas fa-th-large"></i>
+    <p>
+      Produk
+      <!-- <span class="right badge badge-danger">New</span> -->
+    </p>
+  </a>
+</li>
+<li class="nav-header">Transaksi</li>
+<li class="nav-item has-treeview">
+  <a href="{{ route('cart.index') }}" class="nav-link {{ activeSegment('cart') }}">
+      <i class="nav-icon fas fa-barcode"></i>
+      <p>Transaksi Baru</p>
+  </a>
+</li>
+<li class="nav-item">
+  <a href="{{URL::to('/changelogs')}}" class="nav-link {{ activeSegment('changelogs', 1) }}">
+    <i class="nav-icon far fa-plus-square"></i>
+    <p>Perubahan</p>
+  </a>
+</li>
+
+<li class="nav-item has-treeview">
+  <a href="{{ route('settings.index') }}" class="nav-link {{ activeSegment('settings', 1) }}">
+      <i class="nav-icon fas fa-cogs"></i>
+      <p>Pengaturan</p>
+  </a>
+</li>
+@endif
 
 <li class="nav-item">
   <a href="#" class="nav-link" onclick="document.getElementById('logout-form').submit()">

@@ -27,7 +27,19 @@
 <div class="card">
     <div class="card-body">
         <ul class="logs">
-            <h2>v1.0.1</h2>
+            <h2 style="display: inline-block">v1.0.2a&nbsp;</h2><span>(12-08-2023)</span>
+            <li>
+                <p  class="paragraf">Proteksi Route untuk akun yang tidak memiliki izin</p>
+            </li>
+            <li>
+                <p  class="paragraf">Error handler kustom</p>
+            </li>
+            <li>
+                <p  class="paragraf">Persetujuan akun ketika mendaftar</p>
+            </li>
+        </ul>
+        <ul class="logs">
+            <h2 style="display: inline-block">v1.0.1a&nbsp;</h2><span>(11-08-2023)</span>
             <li>
                 <p  class="paragraf">Penambahan Menu Setting</p>
             </li>
@@ -36,7 +48,7 @@
             </li>
         </ul>
         <ul class="logs">
-            <h2>v1.0.0</h2>
+            <h2 style="display: inline-block">v1.0.0a&nbsp;</h2><span>(11-08-2023)</span>
             <li>
                 <p  class="paragraf">Update PHP 8.1 dengan Laravel 10</p>
             </li>

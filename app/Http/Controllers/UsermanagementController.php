@@ -96,4 +96,16 @@ public function UserDelete ($id)
                   }
 
       }
+public function changeRole($id)
+{
+    $user = DB::table('users')->where('id', $id)->first();
+
+    if ($user->role == 3) {
+        DB::table('users')->where('id', $id)->update(['role' => 2]);
+        return redirect()->route('user.index')->with('success', 'Izin akun berhasil diubah.');
+    } else {
+        return redirect()->route('user.index')->with('error', 'Tidak dapat mengubah izin akun.');
+    }
+}
+
 }
