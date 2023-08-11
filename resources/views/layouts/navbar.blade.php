@@ -12,9 +12,7 @@
     <!-- overlayScrollbars -->
     <!-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> -->
     <!-- Google Font: Source Sans Pro -->
-    <script src="
-    https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js
-    "></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
     <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
