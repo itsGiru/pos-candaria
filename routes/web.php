@@ -39,7 +39,7 @@ Route::delete('/cart/empty', [CartController::class, 'empty'])->middleware('chec
 
 //User Account Routes
 Route::post('/change_role/{id}', [App\Http\Controllers\UsermanagementController::class,'changeRole'])->name('user.changeRole')->middleware('checkUserRole:1');
-Route::get('user_list', [App\Http\Controllers\UsermanagementController::class,'UserList'])->name('user.index')->middleware('checkUserRole:1,2');
+Route::get('user_list', [App\Http\Controllers\UsermanagementController::class,'UserList'])->name('user.index')->middleware('checkUserRole:1');
 Route::get('/edit_user/{id}', [App\Http\Controllers\UsermanagementController::class,'UserEdit'])->middleware('checkUserRole:1');
 Route::post('/update_user/{id}', [App\Http\Controllers\UsermanagementController::class,'UserUpdate'])->middleware('checkUserRole:1');
 Route::get('/delete_user/{id}', [App\Http\Controllers\UsermanagementController::class,'UserDelete'])->middleware('checkUserRole:1');
