@@ -86,17 +86,20 @@
           </li>
         
 @endif
+<li class="nav-item">
+  <a href="{{ route('products.index') }}" class="nav-link {{ activeSegment('products', 1) }}">
+    <i class="nav-icon fas fa-th-large"></i>
+    <p>
+      Produk
+      <!-- <span class="right badge badge-danger">New</span> -->
+    </p>
+  </a>
+</li>
 <li class="nav-header">Transaksi</li>
 <li class="nav-item has-treeview">
   <a href="{{ route('cart.index') }}" class="nav-link {{ activeSegment('cart') }}">
       <i class="nav-icon fas fa-barcode"></i>
       <p>Transaksi Baru</p>
-  </a>
-</li>
-<li class="nav-item has-treeview">
-  <a href="{{ route('products.index') }}" class="nav-link {{ activeSegment('products', 1) }}">
-      <i class="nav-icon fas fa-th-large"></i>
-      <p>Produk</p>
   </a>
 </li>
 

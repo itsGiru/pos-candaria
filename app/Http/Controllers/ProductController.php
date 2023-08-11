@@ -65,9 +65,9 @@ class ProductController extends Controller
         ]);
 
         if (!$product) {
-            return redirect()->back()->with('error', 'Sorry, there a problem while creating product.');
+            return redirect()->back()->with('error', 'Maaf, Ada masalah saat menambah produk');
         }
-        return redirect()->route('products.index')->with('success', 'Success, you product have been created.');
+        return redirect()->route('products.index')->with('success', 'Sukses, Produk telah ditambahkan');
     }
 
 
