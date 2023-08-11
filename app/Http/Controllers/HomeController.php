@@ -32,7 +32,7 @@ class HomeController extends Controller
     {
         $products_count = Product::count();
         $orders = Order::with(['items', 'payments'])->get();
-        $customers_count = Customer::count();
+        //$customers_count = Customer::count();
 
         // ambil data order due date nya hari ini
         $currentDate = Carbon::now()->format('Y-m-d');
@@ -70,7 +70,7 @@ class HomeController extends Controller
             'buys_count' => $orders->filter(function($i) {
                 return $i->supplier_id;
             })->count(),
-            'customers_count' => $customers_count,
+            //'customers_count' => $customers_count,
             'products_count' => $products_count,
         ]);
     }
