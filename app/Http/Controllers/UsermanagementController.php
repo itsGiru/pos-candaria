@@ -58,7 +58,7 @@ return view('user.create_User',compact('all'));
         $edit=DB::table('users')
              ->where('id',$id)
              ->first();
-        return view('user.edit_User', compact('edit'));     
+        return view('user.edit_user', compact('edit'));     
     }
 
         public function UserUpdate(Request $request,$id)
