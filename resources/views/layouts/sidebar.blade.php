@@ -48,7 +48,7 @@
                     </li>
                     <li class="nav-header">Transaksi</li>
                     <li class="nav-item has-treeview">
-                        <a href="{{ route('cart.index') }}" class="nav-link {{ activeSegment('cart', 1) }}">
+                        <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-barcode"></i>
                             <p>Transaksi Baru</p>
                         </a>
@@ -61,14 +61,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ URL::to('/changelogs') }}" class="nav-link {{ activeSegment('changelogs', 1) }}">
+                        <a href="#" class="nav-link {{ activeSegment('changelogs', 1) }}">
                             <i class="nav-icon far fa-plus-square"></i>
                             <p>Perubahan</p>
                         </a>
                     </li>
 
                     <li class="nav-item has-treeview">
-                        <a href="{{ route('settings.index') }}" class="nav-link {{ activeSegment('settings', 1) }}">
+                        <a href="#" class="nav-link {{ activeSegment('settings', 1) }}">
                             <i class="nav-icon fas fa-cogs"></i>
                             <p>Pengaturan</p>
                         </a>
@@ -93,7 +93,7 @@
                     </li>
                     <li class="nav-header">Transaksi</li>
                     <li class="nav-item has-treeview">
-                        <a href="{{ route('cart.index') }}" class="nav-link {{ activeSegment('cart', 1) }}">
+                        <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-barcode"></i>
                             <p>Transaksi Baru</p>
                         </a>
@@ -106,14 +106,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ URL::to('/changelogs') }}" class="nav-link {{ activeSegment('changelogs', 1) }}">
+                        <a href="#" class="nav-link {{ activeSegment('changelogs', 1) }}">
                             <i class="nav-icon far fa-plus-square"></i>
                             <p>Perubahan</p>
                         </a>
                     </li>
 
                     <li class="nav-item has-treeview">
-                        <a href="{{ route('settings.index') }}" class="nav-link {{ activeSegment('settings', 1) }}">
+                        <a href="#" class="nav-link {{ activeSegment('settings', 1) }}">
                             <i class="nav-icon fas fa-cogs"></i>
                             <p>Pengaturan</p>
                         </a>

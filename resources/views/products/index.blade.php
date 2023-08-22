@@ -24,7 +24,7 @@
 @if (Auth::user()->role == 1 )
 <div class="card-header bg-white">
 		<div>
-		<a href="{{route('products.create')}}" class="btn text-white btn-primary">Tambah Produk</a>
+		<a href="#" class="btn text-white btn-primary">Tambah Produk</a>
 		</div>
 	</div>
 @endif
