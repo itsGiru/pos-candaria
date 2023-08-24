@@ -68,7 +68,7 @@
                     </li>
 
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link {{ activeSegment('settings', 1) }}">
+                        <a href="{{ route('settings.edit') }}" class="nav-link {{ activeSegment('settings', 1) }}">
                             <i class="nav-icon fas fa-cogs"></i>
                             <p>Pengaturan</p>
                         </a>
@@ -113,7 +113,7 @@
                     </li>
 
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link {{ activeSegment('settings', 1) }}">
+                        <a href="{{ route('settings.edit') }}" class="nav-link {{ activeSegment('settings', 1) }}">
                             <i class="nav-icon fas fa-cogs"></i>
                             <p>Pengaturan</p>
                         </a>
