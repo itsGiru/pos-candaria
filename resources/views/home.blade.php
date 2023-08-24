@@ -78,7 +78,6 @@
           <a href="/products" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
         </div>
       </div>
-      </div>
       <!-- ./col -->
 </div>
 @endif
@@ -126,19 +125,6 @@
             <i class="ion ion-pricetags"></i>
           </div>
           <a href="/products" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-      </div>
-      <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-warning">
-          <div class="inner">
-              <h4>{{config('settings.currency_symbol')}} {{number_format($outcome, 2)}}</h4>
-            <p>Outcome</p>
-          </div>
-          <div class="icon">
-            <i class="ion ion-stats-bars"></i>
-          </div>
-          <a href="#" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
