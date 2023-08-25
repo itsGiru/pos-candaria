@@ -4,11 +4,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\ChangelogsController;
 use App\Http\Controllers\UsermanagementController;
-use App\Http\Controllers\backend\BookcategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +36,9 @@ Route::post('/cart', [CartController::class, 'store'])->name('cart.store')->midd
 Route::post('/cart/change-qty', [CartController::class, 'changeQty'])->middleware('checkUserRole:1,2');
 Route::delete('/cart/delete', [CartController::class, 'delete'])->middleware('checkUserRole:1,2');
 Route::delete('/cart/empty', [CartController::class, 'empty'])->middleware('checkUserRole:1,2');
+
+//Order History Routes
+Route::resource('orders', OrderController::class)->middleware('checkUserRole:1,2');
 
 //User Account Routes
 Route::post('/change_role/{id}', [App\Http\Controllers\UsermanagementController::class,'changeRole'])->name('user.changeRole')->middleware('checkUserRole:1');

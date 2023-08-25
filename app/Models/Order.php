@@ -14,9 +14,12 @@ class Order extends Model
         'product_id',
         'order_id',
         'due_day',
-        'supplier_id',
     ];
 
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
     public function items()
     {
         return $this->hasMany(OrderItem::class);
@@ -33,11 +36,6 @@ class Order extends Model
     public function customer()
     {
         return $this->belongsTo(Customer::class);
-    }
-
-    public function supplier()
-    {
-        return $this->belongsTo(Supplier::class);
     }
 
     public function getCustomerName()
