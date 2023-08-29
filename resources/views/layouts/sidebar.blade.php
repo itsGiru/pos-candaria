@@ -55,7 +55,7 @@
                     </li>
                     <li class="nav-header">Laporan</li>
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link {{ activeSegment('orders', 1) }}">
+                        <a href="{{ route('orders.index') }}" class="nav-link {{ activeSegment('orders', 1) }}">
                             <i class="nav-icon fas fa-cart-plus"></i>
                             <p>Riwayat</p>
                         </a>
@@ -101,7 +101,7 @@
                     </li>
                     <li class="nav-header">Laporan</li>
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link {{ activeSegment('orders', 1) }}">
+                        <a href="{{ route('orders.index') }}" class="nav-link {{ activeSegment('orders', 1) }}">
                             <i class="nav-icon fas fa-cart-plus"></i>
                             <p>Riwayat</p>
                         </a>
