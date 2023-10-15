@@ -5,20 +5,17 @@
 Proyek POS (Point of Sale) Candaria SMKN 2 Purwakarta adalah sebuah sistem kasir yang dibangun khusus untuk kantin sekolah yang diberi nama "Candaria". Aplikasi ini dikembangkan dengan menggunakan framework Laravel 10, dan dirancang untuk memudahkan proses pembayaran dan manajemen stok di kantin sekolah.
 
 Fitur Utama
-- Manajemen Produk: Tambah, edit, dan hapus produk yang tersedia di kantin.
-- Pembayaran: Proses pembayaran dengan cepat dan efisien.
-- Laporan Penjualan: Lihat laporan penjualan harian, mingguan, dan bulanan.
-- Manajemen Stok: Pantau stok produk dan terima pemberitahuan ketika stok hampir habis.
-- Manajemen Pengguna: Atur hak akses pengguna berdasarkan peran (admin, kasir, dll.).
+- Manajemen Produk
+- Manajemen Stok
+- Manajemen Pengguna
 
 Instalasi
 
 Prasyarat
-- PHP 7.4 atau versi lebih tinggi
+- PHP 8.1 atau versi lebih tinggi
 - Composer
 - MySQL Database
 - Node.js dan npm
-- Laravel Sail (Opsional)
 
 Langkah-langkah Instalasi
 1. Clone repositori ini ke dalam direktori proyek lokal Anda.
@@ -37,8 +34,5 @@ Kami sangat menghargai kontribusi dari para pengembang. Jika Anda ingin berkontr
 
 Lisensi
 Proyek ini dilisensikan di bawah Lisensi MIT.
-
-Kontak
-Jika Anda memiliki pertanyaan atau masalah terkait proyek ini, jangan ragu untuk menghubungi kami melalui email di example@email.com.
 
 Terima kasih telah menggunakan POS Candaria SMKN 2 Purwakarta!
