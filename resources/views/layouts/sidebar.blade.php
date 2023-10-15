@@ -1,9 +1,9 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="/home" class="brand-link">
-        <img src="https://adminlte.io/themes/v3/dist/img/AdminLTELogo.png" alt=""
-            class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">{{ config('app.name') }}</span>
+        <img src="https://media.cakeresume.com/image/upload/s--2ClbV2Si--/c_pad,fl_png8,h_315,w_600/v1669277480/yqwll5dgwicv4ejpdlay.png" alt=""
+            class="brand-image" style="opacity: .8">
+        <span class="brand-text font-weight-light"> CANDARIA </span>
     </a>
 
     <!-- Sidebar -->
@@ -11,10 +11,10 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="https://www.gravatar.com/avatar/" class="img-circle elevation-2" alt="">
+                <img src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" class="img-circle elevation-2" alt="">
             </div>
             <div class="info">
-                <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+                <h5 style="color: white"  class="d-block">{{ Auth::user()->name }}</h5>
             </div>
         </div>
 
